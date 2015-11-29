@@ -24,12 +24,22 @@ module.exports = function(grunt) {
 
     // setting up folder structure pointers
     project: {
-      resources: 'resources',
+      dev: 'dev',
       build: 'build',
-      devcss: '<%= project.resources %>/css',
-      devjs: '<%= project.resources %>/js',
+      devcss: '<%= project.dev %>/css',
+      devjs: '<%= project.dev %>/js',
       buildcss: '<%= project.build %>/css',
       buildjs: '<%= project.build %>/js'
+    },
+
+    // including Bootstrap
+    include_bootstrap: {
+      options: {
+        // All options are passed on to the grunt-contrib-less task 
+      },
+      your_target: {
+        // Target-specific file lists and/or options go here. 
+      },
     },
 
     // concatenating all handwritten js to single js file
@@ -59,8 +69,8 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'compressed',
-          sourcemap: 'none',          
-          compass: true
+          sourcemap: 'none'          
+          // compass: true
         },
         files: {
           '<%= project.buildcss %>/css/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
@@ -71,10 +81,11 @@ module.exports = function(grunt) {
     // watching the scss files
     watch: {
       sass: {
-        files: '<%= project.devcss %>/scss/{,*/}*.{scss,sass}',
-        tasks: ['sass:dev'],
-        files: '<%= project.devcss %>/scss/{,*/}*.{scss,sass}',
-        tasks: ['sass:dist'],        
+        files: ['<%= project.devcss %>/scss/{,*/}*.{scss,sass}'],
+        tasks: ['sass:dev', 'sass:dist'],
+        option: {
+          livereload: true
+        }
       }
     }
   });

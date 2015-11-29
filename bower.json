@@ -1,0 +1,25 @@
+{
+  "name": "ixdlegos",
+  "description": "An effort to consolidate and innovate interaction design patterns in the form of working HTML/CSS/JS based UI elements. I call it 'Interaction Legos'",
+  "main": "index.js",
+  "authors": [
+    "Ranjith kumar R"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mysticpixels/ixdlegos",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower": "*",
+    "install": "~1.0.4",
+    "bootstrap": "~3.3.6",
+    "google-fonts": "*"
+  }
+}
