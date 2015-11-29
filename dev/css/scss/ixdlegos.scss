@@ -1,19 +1,129 @@
+/*=======================================
+=            mixins included            =
+=======================================*/
+
+@import "css3mixins";
+
+/*=============================================
+=            bootstrap overrides           =
+=============================================*/
 .ixdlegos{
-	padding-top: 75px;
+	.alert-info{
+		background-color: #d9edf7;
+		border-color: #1193e5;
+		vertical-align: middle;
+		span{
+			font-size: 40px;
+		}
+		strong{
+			line-height: 45px;
+			vertical-align: middle;
+		}
+	}
+	blockquote {
+	  background: transparent;
+	  border:none!important;
+	  margin: 1.5em 10px;
+	  padding: 0.5em 10px;
+	  font-style: italic;
+	  font-size: 16px;
+	  quotes: "\201C""\201D""\2018""\2019";
+	}
+	blockquote:before {
+	  color: #ccc;
+	  content: open-quote;
+	  font-size: 4em;
+	  line-height: 0.1em;
+	  margin-right: 0.25em;
+	  vertical-align: -0.4em;
+	}
+	blockquote p {
+	  display: inline;
+	}
+}
+
+/*=============================================
+=            core ixdleogs rules           =
+=============================================*/
+
+.ixdlegos{
+	background: url(../../images/hexellence.png) repeat left top;
+	padding-top: 30px;
+	
+	// utility rules
+	.underConstruction{
+		position: relative;
+		padding: 10px;
+		margin: 0 0 10px 0;
+		text-align: center;
+		// background: url(../../images/noisy_grid.png) repeat left top;
+		// background-size: 20px;
+		&:before{
+			position: absolute;
+			display: block;
+			left: 0;
+			top:0;
+			height: 100px;
+			width: 100px;
+			background-color: red;
+		}
+		span{
+			font-size: 20px;
+		}
+		strong{
+			font-weight: normal;
+			line-height: 1px;
+		}
+	}
+
+	// hero starts
   .jumbotron{
+  	position: relative;
+  	background: #fff;
+  	border: solid 1px #19ad19;
+  	border-top: solid 5px #19ad19;
   	text-align: center;
+  	@include box-shadow(1px, 1px, 2px , #ccc);
+  	// .menatwork{
+  	// 	position: absolute;
+  	// 	left: 0;
+  	// 	top:0;
+  	// 	height: 75px;
+  	// 	background: url(../../images/nistri.png) repeat left top;
+  	// 	width: 100%;
+  	// 	span{
+  	// 		display: block;
+	  // 		text-align: center;
+	  // 		line-height: 65px;
+	  // 		vertical-align: middle;
+	  // 		font-size: 30px;
+	  // 		color: #a4a4a4;  			
+  	// 	}
+  	// }
 	  blockquote{
 	  	border-color: #ccc;
 	  	border-width: 0 0 0 10px;
-	  	color: #515151;
+	  	color: #878686;
 	  }  	
+	  h1, h2, h3, h4, h5, h6{
+  		font-family: 'Open Sans', sans-serif;
+	  }
   	h1{
-  		color:#19ad19;
+  		// color:#19ad19;
   		text-transform: uppercase;
+  		font-weight: 800;
   		font-size: 50px;
   	}
-  	h4{
+  	h2{
+  		color: #ccc;
   		font-size: 20px;
+			// font-family: 'Courgette', cursive;
+			font-weight: light;
+  	}
+  	h4{
+  		font-size: 25px;
+  		font-weight: 300;
+  		// color: #19ad19;
   	}
   }
 }
