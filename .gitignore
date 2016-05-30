@@ -3,5 +3,4 @@
 *.map
 node_modules
 .sass-cache
-vendors
 .editorconfig
