@@ -6,10 +6,9 @@
 
 'Interaction Design Legos' is an effort to consolidate and innovate interaction design patterns in the form of working HTML/CSS/JS based UI elements, which are semantically meaningful and ready to use in projects.
 
-###Who are behind this?
+###Who is behind this?
 
-- [mysticpixels](http://twitter.com/mysticpixels) - A passionate UX Designeer with deep love for clean/lean code, from Chennai, India
-- [sudheer](http://github.com/sudheerdev) - A budding frontend engineer looking to explore the realms of this exciting domain
+- [mysticpixels](http://twitter.com/mysticpixels) - A passionate UX Designeer with deep love for clean/lean code, from Houston, TX originally from India
 
 ###Who is this for?
 TODO

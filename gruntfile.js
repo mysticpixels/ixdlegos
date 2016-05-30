@@ -32,16 +32,6 @@ module.exports = function(grunt) {
       buildjs: '<%= project.build %>/js'
     },
 
-    // including Bootstrap
-    include_bootstrap: {
-      options: {
-        // All options are passed on to the grunt-contrib-less task 
-      },
-      your_target: {
-        // Target-specific file lists and/or options go here. 
-      },
-    },
-
     // concatenating all handwritten js to single js file
     concat: {
       options: {
@@ -84,7 +74,10 @@ module.exports = function(grunt) {
         files: ['<%= project.devcss %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['sass:dev', 'sass:dist'],
         option: {
-          livereload: true
+          livereload: {
+            host: 'localhost',
+            port: 9000
+          }
         }
       }
     }
@@ -98,6 +91,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-banner');
 
   // registering the tasks
-  grunt.registerTask('default', ['concat', 'sass', 'watch'  ]);
+  grunt.registerTask('default', ['concat', 'sass', 'watch' ]);
 
 };

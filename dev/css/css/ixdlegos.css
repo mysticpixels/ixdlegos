@@ -55,7 +55,8 @@
 =            core ixdleogs rules           =
 =============================================*/
 .ixdlegos {
-  background: url(../../images/hexellence.png) repeat left top;
+  /* background: url(../../images/hexellence.png) repeat left top; */
+  background: #888888;
   padding-top: 30px;
 }
 .ixdlegos .underConstruction {
@@ -83,15 +84,7 @@
 .ixdlegos .jumbotron {
   position: relative;
   background: #fff;
-  border: solid 1px #19ad19;
-  border-top: solid 5px #19ad19;
   text-align: center;
-  -webkit-box-shadow: 1px 1px 2px #ccc;
-  -khtml-box-shadow: 1px 1px 2px #ccc;
-  -moz-box-shadow: 1px 1px 2px #ccc;
-  -ms-box-shadow: 1px 1px 2px #ccc;
-  -o-box-shadow: 1px 1px 2px #ccc;
-  box-shadow: 1px 1px 2px #ccc;
 }
 .ixdlegos .jumbotron blockquote {
   border-color: #ccc;
@@ -102,9 +95,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 .ixdlegos .jumbotron h1 {
-  text-transform: uppercase;
   font-weight: 800;
   font-size: 50px;
+  color: #282256;
 }
 .ixdlegos .jumbotron h2 {
   color: #ccc;
@@ -114,4 +107,13 @@
 .ixdlegos .jumbotron h4 {
   font-size: 25px;
   font-weight: 300;
+  line-height: 35px;
+}
+.ixdlegos .jumbotron h5 {
+  font-size: 18px;
+  padding: 0 20%;
+  text-align: center;
+  color: #7E7E7E;
+  line-height: 25px;
+  font-weight: 200;
 }
