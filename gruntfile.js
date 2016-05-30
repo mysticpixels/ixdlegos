@@ -63,7 +63,7 @@ module.exports = function(grunt) {
           // compass: true
         },
         files: {
-          '<%= project.buildcss %>/css/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
+          '<%= project.buildcss %>/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
         }
       }
     },
@@ -74,13 +74,28 @@ module.exports = function(grunt) {
         files: ['<%= project.devcss %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['sass:dev', 'sass:dist'],
         option: {
-          livereload: {
-            host: 'localhost',
-            port: 9000
-          }
+          livereload: true
         }
       }
-    }
+    },
+
+    // bower install
+    "bower-install-simple": {
+        options: {
+            color: true,
+            directory: "dev"
+        },
+          "prod": {
+            options: {
+                production: true
+            }
+        },
+        "dev": {
+            options: {
+                production: false
+            }
+        }
+      }
   });
 
   // loading the plugins
@@ -89,8 +104,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks("grunt-bower-install-simple");
 
   // registering the tasks
-  grunt.registerTask('default', ['concat', 'sass', 'watch' ]);
+  grunt.registerTask('default', ['concat', 'sass', 'watch', 'bower-install-simple' ]);
 
 };
