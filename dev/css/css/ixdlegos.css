@@ -91,13 +91,21 @@
   border-width: 0 0 0 10px;
   color: #878686;
 }
-.ixdlegos .jumbotron h1, .ixdlegos .jumbotron h2, .ixdlegos .jumbotron h3, .ixdlegos .jumbotron h4, .ixdlegos .jumbotron h5, .ixdlegos .jumbotron h6 {
+.ixdlegos .jumbotron h1,
+.ixdlegos .jumbotron h2,
+.ixdlegos .jumbotron h3,
+.ixdlegos .jumbotron h4,
+.ixdlegos .jumbotron h5,
+.ixdlegos .jumbotron h6 {
   font-family: 'Open Sans', sans-serif;
 }
 .ixdlegos .jumbotron h1 {
+  margin: 0;
+  padding: 20px 0 10px 0;
   font-weight: 800;
   font-size: 50px;
   color: #282256;
+  background: url(../../images/comingsoon.png) no-repeat 70% -1px;
 }
 .ixdlegos .jumbotron h2 {
   color: #ccc;
@@ -110,6 +118,8 @@
   line-height: 35px;
 }
 .ixdlegos .jumbotron h5 {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ddd;
   width: 75%;
   font-size: 18px;
   display: inline-block;
@@ -124,7 +134,13 @@
 }
 .ixdlegos .jumbotron p {
   font-size: 14px;
-  padding: 20px 0;
+}
+.ixdlegos .jumbotron p.social {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+.ixdlegos .jumbotron p.social i {
+  margin-right: 10px;
 }
 .ixdlegos .jumbotron p span {
   display: block;
