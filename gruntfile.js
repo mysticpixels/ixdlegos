@@ -79,6 +79,16 @@ module.exports = function(grunt) {
       }
     },
 
+    // available tasks plugin 
+    availabletasks: {
+      tasks: {
+        options: {
+          filter: 'exclude',
+          tasks: ['availabletasks', 'tasks']
+        }
+      }              
+    },  
+
     // bower install
     "bower-install-simple": {
         options: {
@@ -104,9 +114,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks('grunt-available-tasks');
   grunt.loadNpmTasks("grunt-bower-install-simple");
 
   // registering the tasks
   grunt.registerTask('default', ['concat', 'sass', 'watch', 'bower-install-simple' ]);
+  grunt.registerTask('tasks', ['availabletasks']);
 
 };
