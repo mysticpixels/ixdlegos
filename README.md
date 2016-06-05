@@ -11,7 +11,7 @@
 - [Ranjithkumar](http://twitter.com/mysticpixels) - A passionate UX Designeer with deep love for clean/lean code, from Houston, TX originally from India
 
 ###Who is this for?
-Frontend Engineers is any level of expertise looking for some inspiration and boilerplate to get started with a web project.
+Frontend Engineers with any level of expertise looking for some inspiration and boilerplate to get started with a web project.
 
 ###How to start using it?
 Detailed installation and usage documentation will be added gradually as this repo matures ...
