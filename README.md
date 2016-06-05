@@ -8,10 +8,10 @@
 
 ###Who is behind this?
 
-- [mysticpixels](http://twitter.com/mysticpixels) - A passionate UX Designeer with deep love for clean/lean code, from Houston, TX originally from India
+- [Ranjithkumar](http://twitter.com/mysticpixels) - A passionate UX Designeer with deep love for clean/lean code, from Houston, TX originally from India
 
 ###Who is this for?
-TODO
+Frontend Engineers is any level of expertise looking for some inspiration and boilerplate to get started with a web project.
 
 ###How to start using it?
-TODO
+Detailed installation and usage documentation will be added gradually as this repo matures ...

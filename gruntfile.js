@@ -63,7 +63,7 @@ module.exports = function(grunt) {
           // compass: true
         },
         files: {
-          '<%= project.buildcss %>/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
+          '<%= project.buildcss %>/css/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
         }
       }
     },
