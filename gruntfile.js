@@ -25,23 +25,23 @@ module.exports = function(grunt) {
     // setting up folder structure pointers
     project: {
       dev: 'dev',
-      build: 'build',
+      // build: 'build',
       devcss: '<%= project.dev %>/css',
       devjs: '<%= project.dev %>/js',
-      buildcss: '<%= project.build %>/css',
-      buildjs: '<%= project.build %>/js'
+      // buildcss: '<%= project.build %>/css',
+      // buildjs: '<%= project.build %>/js'
     },
 
     // concatenating all handwritten js to single js file
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['<%= project.devjs %>/*.js'],
-        dest: '<%= project.buildjs %>/uxdlegos.js'
-      }
-    },
+    // concat: {
+    //   options: {
+    //     separator: ';'
+    //   },
+    //   dist: {
+    //     src: ['<%= project.devjs %>/*.js'],
+    //     dest: '<%= project.buildjs %>/uxdlegos.js'
+    //   }
+    // },
 
     // converting scss files to css and saving to relevant folders
     sass: {
@@ -55,17 +55,17 @@ module.exports = function(grunt) {
         files: {
           '<%= project.devcss %>/css/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
         }
-      },
-      dist: {
-        options: {
-          style: 'compressed',
-          sourcemap: 'none'          
-          // compass: true
-        },
-        files: {
-          '<%= project.buildcss %>/css/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
-        }
-      }
+      }//,
+      // dist: {
+      //   options: {
+      //     style: 'compressed',
+      //     sourcemap: 'none'          
+      //     // compass: true
+      //   },
+      //   files: {
+      //     '<%= project.buildcss %>/ixdlegos.css': '<%= project.devcss %>/scss/ixdlegos.scss'
+      //   }
+      // }
     },
 
     // watching the scss files
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-bower-install-simple");
 
   // registering the tasks
-  grunt.registerTask('default', ['concat', 'sass', 'watch', 'bower-install-simple' ]);
+  grunt.registerTask('default', [/*'concat', */'sass', 'watch', 'bower-install-simple' ]);
   grunt.registerTask('tasks', ['availabletasks']);
 
 };
